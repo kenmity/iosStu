@@ -8,15 +8,19 @@
 
 import UIKit
 
-class AViewController: UIViewController {
 
+class AViewController: UIViewController{
+   
+    var dataViewDelegate: DataViewDelegate?
     @IBAction func button1(_ sender: Any) {
+        //把自己移除
+//        view.removeFromSuperview()
+        dataViewDelegate?.setTouch(touch: true)
         print("print");
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
         // Do any additional setup after loading the view.
         
         
@@ -26,6 +30,8 @@ class AViewController: UIViewController {
     }
     
 
+    
+    
     /*
     // MARK: - Navigation
 
